@@ -19,6 +19,19 @@ namespace IParcial
 
         private void button1_Click(object sender, EventArgs e)
         {
+         
+            //Validaciones
+
+            if (Numero1TextBox.Text == "")
+            {
+                errorProvider1.SetError(Numero1TextBox, "Favor ingresar número");
+                
+                return;
+            
+            } 
+            
+            
+            
             //Variable 
             //decimal numero1 = Convert.ToInt32(Numero1TextBox.Text);
 
@@ -63,6 +76,20 @@ namespace IParcial
         private void SalirButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        //Para validar solo numeros
+        private void Numero1TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 44) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se aceptan Números","Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;   
+
+                return;
+            }
+
+
         }
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Numero1TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.PosNegaTextBox = new System.Windows.Forms.TextBox();
             this.LimpiarButton = new System.Windows.Forms.Button();
             this.SalirButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,8 +57,10 @@
             this.Numero1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Numero1TextBox.Location = new System.Drawing.Point(229, 124);
             this.Numero1TextBox.Name = "Numero1TextBox";
+            this.Numero1TextBox.ShortcutsEnabled = false;
             this.Numero1TextBox.Size = new System.Drawing.Size(151, 27);
             this.Numero1TextBox.TabIndex = 1;
+            this.Numero1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Numero1TextBox_KeyPress);
             // 
             // button1
             // 
@@ -128,6 +133,10 @@
             this.SalirButton.UseVisualStyleBackColor = true;
             this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Tarea_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Tarea_1";
             this.Text = "Tarea_1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +170,6 @@
         private System.Windows.Forms.TextBox PosNegaTextBox;
         private System.Windows.Forms.Button LimpiarButton;
         private System.Windows.Forms.Button SalirButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
