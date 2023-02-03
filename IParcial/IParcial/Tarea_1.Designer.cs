@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ParoImparTextBox = new System.Windows.Forms.TextBox();
             this.PosNegaTextBox = new System.Windows.Forms.TextBox();
+            this.LimpiarButton = new System.Windows.Forms.Button();
+            this.SalirButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +52,7 @@
             // Numero1TextBox
             // 
             this.Numero1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numero1TextBox.Location = new System.Drawing.Point(200, 124);
+            this.Numero1TextBox.Location = new System.Drawing.Point(229, 124);
             this.Numero1TextBox.Name = "Numero1TextBox";
             this.Numero1TextBox.Size = new System.Drawing.Size(151, 27);
             this.Numero1TextBox.TabIndex = 1;
@@ -58,11 +60,11 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(116, 305);
+            this.button1.Location = new System.Drawing.Point(229, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(235, 43);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Ejecutar";
+            this.button1.Text = "Verificar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -89,24 +91,50 @@
             // ParoImparTextBox
             // 
             this.ParoImparTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParoImparTextBox.Location = new System.Drawing.Point(200, 178);
+            this.ParoImparTextBox.Location = new System.Drawing.Point(229, 178);
             this.ParoImparTextBox.Name = "ParoImparTextBox";
+            this.ParoImparTextBox.ReadOnly = true;
             this.ParoImparTextBox.Size = new System.Drawing.Size(151, 27);
             this.ParoImparTextBox.TabIndex = 5;
             // 
             // PosNegaTextBox
             // 
             this.PosNegaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PosNegaTextBox.Location = new System.Drawing.Point(200, 226);
+            this.PosNegaTextBox.Location = new System.Drawing.Point(229, 226);
             this.PosNegaTextBox.Name = "PosNegaTextBox";
+            this.PosNegaTextBox.ReadOnly = true;
             this.PosNegaTextBox.Size = new System.Drawing.Size(151, 27);
             this.PosNegaTextBox.TabIndex = 6;
+            // 
+            // LimpiarButton
+            // 
+            this.LimpiarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LimpiarButton.Location = new System.Drawing.Point(229, 364);
+            this.LimpiarButton.Name = "LimpiarButton";
+            this.LimpiarButton.Size = new System.Drawing.Size(235, 43);
+            this.LimpiarButton.TabIndex = 7;
+            this.LimpiarButton.Text = "Limpiar";
+            this.LimpiarButton.UseVisualStyleBackColor = true;
+            this.LimpiarButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // SalirButton
+            // 
+            this.SalirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalirButton.Location = new System.Drawing.Point(522, 364);
+            this.SalirButton.Name = "SalirButton";
+            this.SalirButton.Size = new System.Drawing.Size(235, 43);
+            this.SalirButton.TabIndex = 8;
+            this.SalirButton.Text = "Salir";
+            this.SalirButton.UseVisualStyleBackColor = true;
+            this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
             // Tarea_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 546);
+            this.Controls.Add(this.SalirButton);
+            this.Controls.Add(this.LimpiarButton);
             this.Controls.Add(this.PosNegaTextBox);
             this.Controls.Add(this.ParoImparTextBox);
             this.Controls.Add(this.label3);
@@ -130,5 +158,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ParoImparTextBox;
         private System.Windows.Forms.TextBox PosNegaTextBox;
+        private System.Windows.Forms.Button LimpiarButton;
+        private System.Windows.Forms.Button SalirButton;
     }
 }
