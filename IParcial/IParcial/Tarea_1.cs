@@ -39,29 +39,41 @@ namespace IParcial
 
             numero = Convert.ToInt32(Numero1TextBox.Text);
 
+
+            ParoImparTextBox.Text = evaluarnumero(numero);
+            PosNegaTextBox.Text = evaluarnumeroneg(numero);
+
+
+
+        }
+        //Función #1
+        private string evaluarnumero(decimal numero)
+        {
             ///// Par o Impar
-            if (numero % 2 == 0) {
-                ParoImparTextBox.Text = "Numero Par";
-                       
-            }
-            else
+            if (numero % 2 == 0)
             {
-                ParoImparTextBox.Text = "Numero Impar";
+             return "Numero Par";
+
             }
 
-            ////Negativo o Positivo
+            return "Numero Impar";
+                     
+        }
 
-            if (numero > 0)
+        //Función #2
+
+        private string evaluarnumeroneg(decimal numero)
+        {
+
+            if (numero >= 0)
             {
-                PosNegaTextBox.Text = "Positivo";
+                return "Positivo";
 
             }
-            else
-            {
-                PosNegaTextBox.Text = "Negativo";
-            }
 
+            return "Negativo";
 
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,12 +90,12 @@ namespace IParcial
             Close();
         }
 
-        //Para validar solo numeros
+        //Para validar solo numeros o ((usar expresiones regulares))
         private void Numero1TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 44) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 44) || (e.KeyChar == 46) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo se aceptan Números","Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Solo se aceptan Números Enteros","Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Handled = true;   
 
                 return;
@@ -93,25 +105,7 @@ namespace IParcial
         }
 
 
-        //Funcion
-        //private static bool EsPar(int numeropar)
-        //{ 
-        //    if((numeropar%2)==0)
-        //    {
-
-        //    return true;
-
-        //    }
-        //    else
-        //    {
-        //    return false;
-
-        //    }
-
-
-        //}
-
-
+    
     }
 
 
