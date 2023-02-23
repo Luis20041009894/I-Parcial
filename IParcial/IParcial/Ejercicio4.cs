@@ -22,15 +22,13 @@ namespace IParcial
             DateTime fecha = FechaDateTimePicker1.Value; 
             
             DiaTextBox.Text = fecha.Day.ToString();
-            //MesTextBox.Text = fecha.Month.ToString();
             MesTextBox.Text = fecha.ToString("MMMM");
             AnioTextBox.Text = fecha.Year.ToString();
-            //SemanaTextBox.Text = fecha.DayOfWeek.ToString();
             SemanaTextBox.Text = fecha.ToString("dddd");
 
             int numeroDias = Convert.ToInt32(DiasTextBox.Text);
             DateTime fechaActual = DateTime.Now;
-            
+                        
             
             CitaTextBox.Text = fechaActual.AddDays(numeroDias).ToShortDateString();
             
@@ -38,7 +36,31 @@ namespace IParcial
 
             NuevaFechaTextBox.Text = fecha.AddDays(-diasresta).ToLongDateString();
 
+            MessageBox.Show("La edad es: " + DevolverEdad(fecha));
         }
+
+        private int DevolverEdad(DateTime FechaNacimiento)
+        {
+            DateTime fechaActual = DateTime.Now;
+            int edad = 0;
+
+            if (FechaNacimiento >= fechaActual)
+            {
+              return 0;
+
+            }
+            else
+            {
+                edad = fechaActual.Year - FechaNacimiento.Year;
+                if (FechaNacimiento.Month > fechaActual.Month) {
+                    --edad;
+                                
+                }
+                return edad;
+            }
+
+        }
+
 
         }
 

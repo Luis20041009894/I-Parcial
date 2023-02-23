@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IParcial
+namespace Ejercicio5
 {
     internal static class Program
     {
@@ -16,8 +16,7 @@ namespace IParcial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ejercicio4());
-            //Application.Run(new Tarea_1());
+            Application.Run(new Form1());
         }
     }
 }

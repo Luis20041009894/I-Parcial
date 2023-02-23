@@ -24,6 +24,7 @@ namespace IParcial
             {
                 errorProvider1.SetError(Numero1TextBox, "Seleccion un valor");
                 return;
+               
             }
 
             if (Numero2TextBox.Text == "")
@@ -38,6 +39,8 @@ namespace IParcial
                 return;
             }
             errorProvider1.Clear();
+            
+
             decimal resultado = Ejecutar(Convert.ToDecimal(Numero1TextBox.Text), Convert.ToDecimal(Numero2TextBox.Text));
 
             ResultadoLabel.Text = Convert.ToString(resultado); 

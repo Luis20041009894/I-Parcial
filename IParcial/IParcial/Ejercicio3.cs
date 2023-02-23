@@ -23,11 +23,11 @@ namespace IParcial
 
             LongitudTextBox.Text = cadena.Length.ToString();
             PrimercaracterTextBox.Text = cadena.Substring(0, 1);
-            UltimocaracterTextBox.Text = cadena.Substring(cadena.Length - 2, 2);
+            UltimocaracterTextBox.Text = cadena.Substring(cadena.Length - 1, 1);
             MayusculaTextBox.Text = cadena.ToUpper();
             MinusculaTextBox.Text = cadena.ToLower();
             //ReemplazarTextBox.Text = cadena.Replace("A", "E");
-            ReemplazarTextBox.Text = cadena.ToUpper().Replace("A", "E");
+            ReemplazarTextBox.Text = cadena.ToUpper().Replace("A", "E").ToLower();
 
 
         }
