@@ -44,7 +44,7 @@ namespace IParcial
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(63, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 31);
+            this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Numero 1:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -71,7 +71,7 @@ namespace IParcial
             // 
             // CalcularButton
             // 
-            this.CalcularButton.Location = new System.Drawing.Point(406, 206);
+            this.CalcularButton.Location = new System.Drawing.Point(342, 208);
             this.CalcularButton.Name = "CalcularButton";
             this.CalcularButton.Size = new System.Drawing.Size(214, 77);
             this.CalcularButton.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace IParcial
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 31);
+            this.label2.Size = new System.Drawing.Size(108, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Numero 2: ";
             // 
@@ -92,14 +92,14 @@ namespace IParcial
             // 
             this.Numero1TextBox.Location = new System.Drawing.Point(180, 208);
             this.Numero1TextBox.Name = "Numero1TextBox";
-            this.Numero1TextBox.Size = new System.Drawing.Size(184, 30);
+            this.Numero1TextBox.Size = new System.Drawing.Size(116, 30);
             this.Numero1TextBox.TabIndex = 5;
             // 
             // Numero2TextBox
             // 
             this.Numero2TextBox.Location = new System.Drawing.Point(180, 253);
             this.Numero2TextBox.Name = "Numero2TextBox";
-            this.Numero2TextBox.Size = new System.Drawing.Size(184, 30);
+            this.Numero2TextBox.Size = new System.Drawing.Size(116, 30);
             this.Numero2TextBox.TabIndex = 6;
             // 
             // Ejercicio5
