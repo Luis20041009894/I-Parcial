@@ -16,7 +16,7 @@ namespace IParcial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ejercicio6());
+            Application.Run(new Ejercicio9());
             //Application.Run(new Tarea_1());
         }
     }
