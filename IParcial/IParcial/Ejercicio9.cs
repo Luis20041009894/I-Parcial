@@ -28,7 +28,7 @@ namespace IParcial
 
             string marca = MarcaTextBox.Text;
             string modelo = MarcaTextBox.Text;
-            //Con validación para cuando este vacio y asignar cero // forma avanzada del Lic Nahum / no se usa if and else
+            //Con validación para cuando este vacio y asignar cero // forma avanzada del Ing Nahum Casco / no se usa if and else
             decimal precio = PrecioTextBox.Text == string.Empty ? 0 : Convert.ToDecimal(PrecioTextBox.Text);
             int km = KilometrosTextBox.Text == string.Empty ? 0 : Convert.ToInt32(KilometrosTextBox.Text);
 
