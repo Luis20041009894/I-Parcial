@@ -28,7 +28,7 @@ namespace Vista
             if (ContraseñaTextBox.Text == string.Empty)
             {
                 errorProvider1.SetError(ContraseñaTextBox, "Ingrese su contraseña");
-                ContraseñaTextBox.Clear();
+                //ContraseñaTextBox.Clear();
                 ContraseñaTextBox.Focus();
                 return;
             }
@@ -39,17 +39,17 @@ namespace Vista
             // Mostrar el Menu
 
             Menu menuFormulario = new Menu();
-            Hide();
+            this.Hide();
             menuFormulario.Show();
 
         }
+
 
         private void MostrarButton_Click(object sender, EventArgs e)
         {
             if (ContraseñaTextBox.PasswordChar == '*')
             {
                 ContraseñaTextBox.PasswordChar = '\0';
-
             }
             else
             {

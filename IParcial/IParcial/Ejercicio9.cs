@@ -1,13 +1,7 @@
-﻿using System;
+﻿using Programacion_orientada_a_objetos;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Programacion_orientada_a_objetos;
 
 namespace IParcial
 {
@@ -39,7 +33,7 @@ namespace IParcial
             miCoche.Marca = marca;
             miCoche.Modelo = modelo;
             miCoche.Precio = precio;
-            miCoche.Kilometros= km;
+            miCoche.Kilometros = km;
 
             ListaCoches.Add(miCoche);
             CochesDataGridView.DataSource = null;
@@ -47,8 +41,7 @@ namespace IParcial
             LimpiarControles();
             MarcaTextBox.Focus();
 
-           // MessageBox.Show("Objeto Coche -> Marca: " + miCoche.Marca + " Modelo:  " + miCoche.Modelo);
-
+            // MessageBox.Show("Objeto Coche -> Marca: " + miCoche.Marca + " Modelo:  " + miCoche.Modelo);
 
         }
 
@@ -58,7 +51,6 @@ namespace IParcial
             ModeloTextBox.Clear();
             PrecioTextBox.Clear();
             KilometrosTextBox.Clear();
-
 
         }
 

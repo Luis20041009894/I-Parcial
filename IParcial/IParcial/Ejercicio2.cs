@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IParcial
@@ -24,7 +17,7 @@ namespace IParcial
             {
                 errorProvider1.SetError(Numero1TextBox, "Seleccion un valor");
                 return;
-               
+
             }
 
             if (Numero2TextBox.Text == "")
@@ -39,16 +32,16 @@ namespace IParcial
                 return;
             }
             errorProvider1.Clear();
-            
+
 
             decimal resultado = Ejecutar(Convert.ToDecimal(Numero1TextBox.Text), Convert.ToDecimal(Numero2TextBox.Text));
 
-            ResultadoLabel.Text = Convert.ToString(resultado); 
+            ResultadoLabel.Text = Convert.ToString(resultado);
 
 
         }
 
-        decimal Ejecutar(decimal n1, decimal n2) 
+        decimal Ejecutar(decimal n1, decimal n2)
         {
             string operacion = OperacionesComboBox.Text;
             decimal resultado = 0;
@@ -66,7 +59,7 @@ namespace IParcial
                 resultado = n1 * n2;
             }
             else if (operacion == "División")
-            
+
             {
                 resultado = n1 / n2;
 
@@ -74,30 +67,33 @@ namespace IParcial
             return resultado;
 
 
-                }
+        }
         private decimal Ejecutar2(decimal n1, decimal n2)
         {
             string operacion = OperacionesComboBox.Text;
             decimal resultado = 0;
             if (operacion == "Suma")
-                resultado= n1 + n2;
+                resultado = n1 + n2;
             else if (operacion == "Resta")
-                resultado= n1 - n2;
+                resultado = n1 - n2;
             else if (operacion == "Multiplicación")
-                resultado= n1 * n2;
+                resultado = n1 * n2;
             else if (operacion == "División")
-                resultado= n1 / n2; 
+                resultado = n1 / n2;
             return resultado;
         }
 
+        private void Numero1TextBox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
-        
-        
+
+
 }
 
 
 
-    
+
 

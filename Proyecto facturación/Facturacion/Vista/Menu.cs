@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vista
@@ -15,6 +8,25 @@ namespace Vista
         public Menu()
         {
             InitializeComponent();
+        }
+
+        private void UsuariosToolStripButton_Click(object sender, EventArgs e)
+        {
+            UsuariosForm userForm = new UsuariosForm();
+            userForm.MdiParent = this;
+            userForm.Show();
+        }
+
+        private void ProductosToolStripButton_Click(object sender, EventArgs e)
+        {
+            ProductosForm productosForm = new ProductosForm();
+            productosForm.MdiParent = this;
+            productosForm.Show();
+        }
+
+        private void RibbonPanel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
