@@ -1,4 +1,4 @@
-﻿using System.Data;
+﻿using System;
 
 namespace Entidades
 {
@@ -10,14 +10,14 @@ namespace Entidades
         public string Correo { get; set; }
         public string Rol { get; set; }
         public byte[] Foto { get; set; }
-        public DataSetDateTime FechaCreacion { get; set; }
-        public bool EstadoActivo { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public bool EstaActivo { get; set; }
 
         public Usuario()
         {
         }
 
-        public Usuario(string codigoUsuario, string nombre, string contraseña, string correo, string rol, byte[] foto, DataSetDateTime fechaCreacion, bool estadoActivo)
+        public Usuario(string codigoUsuario, string nombre, string contraseña, string correo, string rol, byte[] foto, DateTime fechaCreacion, bool estaActivo)
         {
             CodigoUsuario = codigoUsuario;
             Nombre = nombre;
@@ -26,7 +26,7 @@ namespace Entidades
             Rol = rol;
             Foto = foto;
             FechaCreacion = fechaCreacion;
-            EstadoActivo = estadoActivo;
+            EstaActivo = estaActivo;
         }
     }
 }

@@ -101,7 +101,6 @@
             this.toolStripTabItem1.Panel.ScrollPosition = 0;
             this.toolStripTabItem1.Panel.TabIndex = 2;
             this.toolStripTabItem1.Panel.Text = "Seguridades";
-            this.toolStripTabItem1.Panel.Click += new System.EventHandler(this.RibbonPanel_Click);
             this.toolStripTabItem1.Position = 0;
             this.toolStripTabItem1.Size = new System.Drawing.Size(123, 41);
             this.toolStripTabItem1.Tag = "1";

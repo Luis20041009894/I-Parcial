@@ -124,7 +124,7 @@ namespace Vista
                 user.Contraseña = ContraseñaTextBox.Text;
                 user.Rol = RolComboBox.Text;
                 user.Correo = CorreoTextBox.Text;
-                user.EstadoActivo = EstaActivoCheckBox.Checked;
+                user.EstaActivo = EstaActivoCheckBox.Checked;
 
                 if (FotoPictureBox.Image != null)
                 {
