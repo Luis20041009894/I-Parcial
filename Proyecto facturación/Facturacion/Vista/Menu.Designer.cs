@@ -41,6 +41,7 @@
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.NuevafacturaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.SalirButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
@@ -276,11 +277,24 @@
             this.NuevafacturaToolStripButton.Text = "Nueva Factura";
             this.NuevafacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // SalirButton
+            // 
+            this.SalirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalirButton.ForeColor = System.Drawing.Color.Red;
+            this.SalirButton.Location = new System.Drawing.Point(1168, 12);
+            this.SalirButton.Name = "SalirButton";
+            this.SalirButton.Size = new System.Drawing.Size(129, 57);
+            this.SalirButton.TabIndex = 2;
+            this.SalirButton.Text = "SALIR";
+            this.SalirButton.UseVisualStyleBackColor = true;
+            this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 821);
+            this.Controls.Add(this.SalirButton);
             this.Controls.Add(this.ribbonControlAdv1);
             this.IsMdiContainer = true;
             this.Name = "Menu";
@@ -323,5 +337,6 @@
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
         private System.Windows.Forms.ToolStripButton ClientesToolStripButton;
         private System.Windows.Forms.ToolStripButton NuevafacturaToolStripButton;
+        private System.Windows.Forms.Button SalirButton;
     }
 }

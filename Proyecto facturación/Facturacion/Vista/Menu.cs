@@ -28,5 +28,10 @@ namespace Vista
         {
 
         }
+
+        private void SalirButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

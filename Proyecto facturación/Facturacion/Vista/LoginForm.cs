@@ -46,7 +46,7 @@ namespace Vista
 
             if (usuario != null)
             {
-                if (usuario.EstaActivo)
+                if (usuario.EstadoActivo)
                 {
                     // Mostrar el Menu
                     Menu menuFormulario = new Menu();
@@ -77,6 +77,11 @@ namespace Vista
             {
                 ContraseñaTextBox.PasswordChar += '*';
             }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            UsuarioTextBox.Focus();
         }
     }
 }

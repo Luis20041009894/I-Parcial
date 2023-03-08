@@ -65,7 +65,7 @@
             this.UsuarioTextBox.Location = new System.Drawing.Point(125, 24);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(251, 27);
-            this.UsuarioTextBox.TabIndex = 5;
+            this.UsuarioTextBox.TabIndex = 0;
             // 
             // ContraseñaTextBox
             // 
@@ -73,7 +73,7 @@
             this.ContraseñaTextBox.Name = "ContraseñaTextBox";
             this.ContraseñaTextBox.PasswordChar = '*';
             this.ContraseñaTextBox.Size = new System.Drawing.Size(251, 27);
-            this.ContraseñaTextBox.TabIndex = 6;
+            this.ContraseñaTextBox.TabIndex = 1;
             // 
             // errorProvider1
             // 
@@ -87,7 +87,7 @@
             this.AceptarButton.Location = new System.Drawing.Point(125, 113);
             this.AceptarButton.Name = "AceptarButton";
             this.AceptarButton.Size = new System.Drawing.Size(112, 42);
-            this.AceptarButton.TabIndex = 2;
+            this.AceptarButton.TabIndex = 3;
             this.AceptarButton.Text = "Aceptar";
             this.AceptarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AceptarButton.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.CancelarButton.Location = new System.Drawing.Point(243, 113);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(116, 42);
-            this.CancelarButton.TabIndex = 3;
+            this.CancelarButton.TabIndex = 4;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CancelarButton.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             this.MostrarButton.Location = new System.Drawing.Point(382, 64);
             this.MostrarButton.Name = "MostrarButton";
             this.MostrarButton.Size = new System.Drawing.Size(33, 28);
-            this.MostrarButton.TabIndex = 7;
+            this.MostrarButton.TabIndex = 2;
             this.MostrarButton.UseVisualStyleBackColor = true;
             this.MostrarButton.Click += new System.EventHandler(this.MostrarButton_Click);
             // 
@@ -129,7 +129,7 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Login
+            // LoginForm
             // 
             this.AcceptButton = this.AceptarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -148,9 +148,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

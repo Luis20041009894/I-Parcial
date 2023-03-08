@@ -40,7 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.RolComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.EstaActivoCheckBox = new System.Windows.Forms.CheckBox();
+            this.EstadoActivoCheckBox = new System.Windows.Forms.CheckBox();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.AdjuntarFotoButton = new System.Windows.Forms.Button();
             this.FotoPictureBox = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,7 @@
             this.EliminarButton = new System.Windows.Forms.Button();
             this.UsuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.RegresarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -155,15 +156,15 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Esta Activo:";
             // 
-            // EstaActivoCheckBox
+            // EstadoActivoCheckBox
             // 
-            this.EstaActivoCheckBox.AutoSize = true;
-            this.EstaActivoCheckBox.Enabled = false;
-            this.EstaActivoCheckBox.Location = new System.Drawing.Point(92, 281);
-            this.EstaActivoCheckBox.Name = "EstaActivoCheckBox";
-            this.EstaActivoCheckBox.Size = new System.Drawing.Size(18, 17);
-            this.EstaActivoCheckBox.TabIndex = 11;
-            this.EstaActivoCheckBox.UseVisualStyleBackColor = true;
+            this.EstadoActivoCheckBox.AutoSize = true;
+            this.EstadoActivoCheckBox.Enabled = false;
+            this.EstadoActivoCheckBox.Location = new System.Drawing.Point(92, 281);
+            this.EstadoActivoCheckBox.Name = "EstadoActivoCheckBox";
+            this.EstadoActivoCheckBox.Size = new System.Drawing.Size(18, 17);
+            this.EstadoActivoCheckBox.TabIndex = 11;
+            this.EstadoActivoCheckBox.UseVisualStyleBackColor = true;
             // 
             // NuevoButton
             // 
@@ -209,7 +210,6 @@
             // 
             // ModificarButton
             // 
-            this.ModificarButton.Enabled = false;
             this.ModificarButton.Location = new System.Drawing.Point(428, 264);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(84, 49);
@@ -231,33 +231,46 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Enabled = false;
             this.EliminarButton.Location = new System.Drawing.Point(608, 264);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(84, 49);
             this.EliminarButton.TabIndex = 18;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // UsuariosDataGridView
             // 
+            this.UsuariosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UsuariosDataGridView.Location = new System.Drawing.Point(-130, 319);
+            this.UsuariosDataGridView.Location = new System.Drawing.Point(2, 319);
             this.UsuariosDataGridView.Name = "UsuariosDataGridView";
             this.UsuariosDataGridView.RowHeadersWidth = 51;
             this.UsuariosDataGridView.RowTemplate.Height = 24;
-            this.UsuariosDataGridView.Size = new System.Drawing.Size(941, 221);
+            this.UsuariosDataGridView.Size = new System.Drawing.Size(1129, 221);
             this.UsuariosDataGridView.TabIndex = 19;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // RegresarButton
+            // 
+            this.RegresarButton.Location = new System.Drawing.Point(1038, 9);
+            this.RegresarButton.Name = "RegresarButton";
+            this.RegresarButton.Size = new System.Drawing.Size(84, 49);
+            this.RegresarButton.TabIndex = 20;
+            this.RegresarButton.Text = "Regresar";
+            this.RegresarButton.UseVisualStyleBackColor = true;
+            this.RegresarButton.Click += new System.EventHandler(this.RegresarButton_Click);
+            // 
             // UsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 537);
+            this.ClientSize = new System.Drawing.Size(1134, 537);
+            this.Controls.Add(this.RegresarButton);
             this.Controls.Add(this.UsuariosDataGridView);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -266,7 +279,7 @@
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.AdjuntarFotoButton);
             this.Controls.Add(this.FotoPictureBox);
-            this.Controls.Add(this.EstaActivoCheckBox);
+            this.Controls.Add(this.EstadoActivoCheckBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.RolComboBox);
             this.Controls.Add(this.label5);
@@ -280,6 +293,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UsuariosForm";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.UsuariosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -301,7 +315,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox RolComboBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox EstaActivoCheckBox;
+        private System.Windows.Forms.CheckBox EstadoActivoCheckBox;
         private System.Windows.Forms.PictureBox FotoPictureBox;
         private System.Windows.Forms.Button AdjuntarFotoButton;
         private System.Windows.Forms.Button NuevoButton;
@@ -311,5 +325,6 @@
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.DataGridView UsuariosDataGridView;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button RegresarButton;
     }
 }
