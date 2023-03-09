@@ -75,7 +75,6 @@ namespace Vista
 
         }
 
-
         private void DeshabilitarControles()
         {
             CodigoTextBox.Enabled = false;
@@ -185,7 +184,6 @@ namespace Vista
                 {
                     MessageBox.Show("No se pudo actualizar el registro", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
 
 
             }
