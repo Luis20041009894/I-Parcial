@@ -42,7 +42,7 @@ namespace Vista
         private void CancelarButton_Click(object sender, System.EventArgs e)
         {
             DeshabilitarControl();
-            LimpiarControls();
+            LimpiarControles();
         }
 
         private void HabilitarControl()
@@ -75,7 +75,7 @@ namespace Vista
 
         }
 
-        private void LimpiarControls()
+        private void LimpiarControles()
         {
             CodigoTextBox.Clear();
             NombreTextBox.Clear();
@@ -170,7 +170,7 @@ namespace Vista
 
                 if (inserto)
                 {
-                    LimpiarControls();
+                    LimpiarControles();
                     DeshabilitarControl();
                     TraerUsuarios();
                     MessageBox.Show("Registro Guardado");
@@ -203,7 +203,7 @@ namespace Vista
                 bool modifico = UsuarioDB.Editar(user);
                 if (modifico)
                 {
-                    LimpiarControls();
+                    LimpiarControles();
                     DeshabilitarControl();
                     TraerUsuarios();
                     MessageBox.Show("Registro actualizado correctamente");
@@ -245,7 +245,7 @@ namespace Vista
                     bool elimino = UsuarioDB.Eliminar(UsuariosDataGridView.CurrentRow.Cells["CodigoUsuario"].Value.ToString());
                     if (elimino)
                     {
-                        LimpiarControls();
+                        LimpiarControles();
                         DeshabilitarControl();
                         TraerUsuarios();
                         MessageBox.Show("Registro Eliminado");

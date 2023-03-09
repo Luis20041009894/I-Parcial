@@ -37,8 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.PrecioTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
-            this.AdjuntarImagenButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.ModificarButton = new System.Windows.Forms.Button();
@@ -46,9 +44,13 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.ProductosDataGridView = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
+            this.EstadoActivoCheckBox = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.AdjuntarImagenButton = new System.Windows.Forms.Button();
+            this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +67,7 @@
             this.CodigoTextBox.Enabled = false;
             this.CodigoTextBox.Location = new System.Drawing.Point(122, 6);
             this.CodigoTextBox.Name = "CodigoTextBox";
-            this.CodigoTextBox.Size = new System.Drawing.Size(198, 27);
+            this.CodigoTextBox.Size = new System.Drawing.Size(352, 27);
             this.CodigoTextBox.TabIndex = 1;
             // 
             // DescripcionTextBox
@@ -73,7 +75,7 @@
             this.DescripcionTextBox.Enabled = false;
             this.DescripcionTextBox.Location = new System.Drawing.Point(122, 51);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
-            this.DescripcionTextBox.Size = new System.Drawing.Size(198, 27);
+            this.DescripcionTextBox.Size = new System.Drawing.Size(352, 27);
             this.DescripcionTextBox.TabIndex = 3;
             // 
             // label2
@@ -121,38 +123,20 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Precio:";
             // 
-            // ImagenPictureBox
-            // 
-            this.ImagenPictureBox.BackColor = System.Drawing.Color.White;
-            this.ImagenPictureBox.Location = new System.Drawing.Point(350, 9);
-            this.ImagenPictureBox.Name = "ImagenPictureBox";
-            this.ImagenPictureBox.Size = new System.Drawing.Size(206, 159);
-            this.ImagenPictureBox.TabIndex = 8;
-            this.ImagenPictureBox.TabStop = false;
-            // 
-            // AdjuntarImagenButton
-            // 
-            this.AdjuntarImagenButton.Image = global::Vista.Properties.Resources.imagen;
-            this.AdjuntarImagenButton.Location = new System.Drawing.Point(562, 111);
-            this.AdjuntarImagenButton.Name = "AdjuntarImagenButton";
-            this.AdjuntarImagenButton.Size = new System.Drawing.Size(75, 57);
-            this.AdjuntarImagenButton.TabIndex = 9;
-            this.AdjuntarImagenButton.UseVisualStyleBackColor = true;
-            // 
             // EliminarButton
             // 
-            this.EliminarButton.Enabled = false;
-            this.EliminarButton.Location = new System.Drawing.Point(443, 186);
+            this.EliminarButton.Location = new System.Drawing.Point(533, 186);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(93, 49);
             this.EliminarButton.TabIndex = 23;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
             this.GuardarButton.Enabled = false;
-            this.GuardarButton.Location = new System.Drawing.Point(335, 186);
+            this.GuardarButton.Location = new System.Drawing.Point(425, 186);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(93, 49);
             this.GuardarButton.TabIndex = 22;
@@ -162,8 +146,7 @@
             // 
             // ModificarButton
             // 
-            this.ModificarButton.Enabled = false;
-            this.ModificarButton.Location = new System.Drawing.Point(227, 186);
+            this.ModificarButton.Location = new System.Drawing.Point(317, 186);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(93, 49);
             this.ModificarButton.TabIndex = 21;
@@ -174,7 +157,7 @@
             // CancelarButton
             // 
             this.CancelarButton.Enabled = false;
-            this.CancelarButton.Location = new System.Drawing.Point(551, 186);
+            this.CancelarButton.Location = new System.Drawing.Point(641, 186);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(93, 49);
             this.CancelarButton.TabIndex = 20;
@@ -184,7 +167,7 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(119, 186);
+            this.NuevoButton.Location = new System.Drawing.Point(209, 186);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(93, 49);
             this.NuevoButton.TabIndex = 19;
@@ -199,18 +182,57 @@
             this.ProductosDataGridView.Name = "ProductosDataGridView";
             this.ProductosDataGridView.RowHeadersWidth = 51;
             this.ProductosDataGridView.RowTemplate.Height = 24;
-            this.ProductosDataGridView.Size = new System.Drawing.Size(688, 189);
+            this.ProductosDataGridView.Size = new System.Drawing.Size(760, 189);
             this.ProductosDataGridView.TabIndex = 24;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // EstadoActivoCheckBox
+            // 
+            this.EstadoActivoCheckBox.AutoSize = true;
+            this.EstadoActivoCheckBox.Location = new System.Drawing.Point(135, 203);
+            this.EstadoActivoCheckBox.Name = "EstadoActivoCheckBox";
+            this.EstadoActivoCheckBox.Size = new System.Drawing.Size(18, 17);
+            this.EstadoActivoCheckBox.TabIndex = 25;
+            this.EstadoActivoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 199);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 20);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Estado Activo:";
+            // 
+            // AdjuntarImagenButton
+            // 
+            this.AdjuntarImagenButton.Image = global::Vista.Properties.Resources.imagen;
+            this.AdjuntarImagenButton.Location = new System.Drawing.Point(695, 124);
+            this.AdjuntarImagenButton.Name = "AdjuntarImagenButton";
+            this.AdjuntarImagenButton.Size = new System.Drawing.Size(49, 40);
+            this.AdjuntarImagenButton.TabIndex = 9;
+            this.AdjuntarImagenButton.UseVisualStyleBackColor = true;
+            this.AdjuntarImagenButton.Click += new System.EventHandler(this.AdjuntarImagenButton_Click);
+            // 
+            // ImagenPictureBox
+            // 
+            this.ImagenPictureBox.BackColor = System.Drawing.Color.White;
+            this.ImagenPictureBox.Location = new System.Drawing.Point(483, 6);
+            this.ImagenPictureBox.Name = "ImagenPictureBox";
+            this.ImagenPictureBox.Size = new System.Drawing.Size(206, 159);
+            this.ImagenPictureBox.TabIndex = 8;
+            this.ImagenPictureBox.TabStop = false;
+            // 
             // ProductosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 461);
+            this.ClientSize = new System.Drawing.Size(760, 461);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.EstadoActivoCheckBox);
             this.Controls.Add(this.ProductosDataGridView);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -231,9 +253,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ProductosForm";
             this.Text = "Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
+            this.Load += new System.EventHandler(this.ProductosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +281,7 @@
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.DataGridView ProductosDataGridView;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox EstadoActivoCheckBox;
     }
 }
