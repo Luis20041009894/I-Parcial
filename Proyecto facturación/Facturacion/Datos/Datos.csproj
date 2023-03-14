@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteDB.cs" />
     <Compile Include="FacturaDB.cs" />
     <Compile Include="ProductoDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

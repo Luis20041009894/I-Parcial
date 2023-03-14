@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class FacturaForm1 : Form
+    public partial class BuscarClienteForm : Form
     {
-        public FacturaForm1()
+        public BuscarClienteForm()
         {
             InitializeComponent();
         }

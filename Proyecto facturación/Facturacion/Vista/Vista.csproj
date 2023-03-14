@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Syncfusion.Core.WinForms, Version=20.4460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Core.WinForms.20.4.0.38\lib\net46\Syncfusion.Core.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Grid.Base, Version=20.4460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Grid.Base.20.4.0.38\lib\net46\Syncfusion.Grid.Base.dll</HintPath>
     </Reference>
@@ -71,11 +74,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FacturaForm1.cs">
+    <Compile Include="BuscarClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacturaForm1.Designer.cs">
-      <DependentUpon>FacturaForm1.cs</DependentUpon>
+    <Compile Include="BuscarClienteForm.Designer.cs">
+      <DependentUpon>BuscarClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaForm.Designer.cs">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -103,8 +118,14 @@
     <Compile Include="UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FacturaForm1.resx">
-      <DependentUpon>FacturaForm1.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarClienteForm.resx">
+      <DependentUpon>BuscarClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaForm.resx">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

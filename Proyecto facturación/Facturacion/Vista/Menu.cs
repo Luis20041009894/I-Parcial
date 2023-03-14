@@ -33,5 +33,12 @@ namespace Vista
         {
             Close();
         }
+
+        private void ClientesToolStripButton_Click(object sender, EventArgs e)
+        {
+            ClienteForm clienteForm = new ClienteForm();
+            clienteForm.MdiParent = this;
+            clienteForm.Show();
+        }
     }
 }

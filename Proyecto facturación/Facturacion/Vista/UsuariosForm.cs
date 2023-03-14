@@ -57,7 +57,6 @@ namespace Vista
             GuardarButton.Enabled = true;
             CancelarButton.Enabled = true;
             ModificarButton.Enabled = false;
-
         }
 
         private void DeshabilitarControl()

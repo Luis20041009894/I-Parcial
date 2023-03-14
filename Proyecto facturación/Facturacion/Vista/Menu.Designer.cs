@@ -79,7 +79,7 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1309, 146);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -218,7 +218,7 @@
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(77, 61);
+            this.toolStripEx4.Size = new System.Drawing.Size(116, 61);
             this.toolStripEx4.TabIndex = 0;
             // 
             // ClientesToolStripButton
@@ -231,6 +231,7 @@
             this.ClientesToolStripButton.Text = "Clientes";
             this.ClientesToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ClientesToolStripButton.Click += new System.EventHandler(this.ClientesToolStripButton_Click);
             // 
             // toolStripTabItem4
             // 
