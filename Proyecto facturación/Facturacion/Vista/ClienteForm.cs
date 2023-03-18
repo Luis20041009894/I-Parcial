@@ -24,6 +24,7 @@ namespace Vista
         {
             IdTextBox.Focus();
             HabilitarControl();
+            LimpiarControles();
             TipodeOperacion = "Nuevo";
         }
 
@@ -39,6 +40,7 @@ namespace Vista
             TelefonoTextBox.Enabled = true;
             CorreoTextBox.Enabled = true;
             DireccionTextBox.Enabled = true;
+            FechaNacimientoDateTimePicker.Enabled = true;
             EstadoActivoCheckBox.Enabled = true;
             GuardarButton.Enabled = true;
             CancelarButton.Enabled = true;
@@ -52,6 +54,7 @@ namespace Vista
             TelefonoTextBox.Enabled = false;
             CorreoTextBox.Enabled = false;
             DireccionTextBox.Enabled = false;
+            FechaNacimientoDateTimePicker.Enabled = false;
             EstadoActivoCheckBox.Enabled = false;
             GuardarButton.Enabled = false;
             CancelarButton.Enabled = false;
@@ -65,7 +68,7 @@ namespace Vista
             TelefonoTextBox.Clear();
             CorreoTextBox.Clear();
             DireccionTextBox.Clear();
-            FechaNacimientoDateTimePicker = null;
+            FechaNacimientoDateTimePicker.Value = new DateTime(1950, 1, 01);
             EstadoActivoCheckBox.Checked = false;
         }
 

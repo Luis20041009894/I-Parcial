@@ -17,7 +17,7 @@ namespace Datos
             try
             {
                 StringBuilder sqlFactura = new StringBuilder();
-                sqlFactura.Append("INSERT INTO factura VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Subtotal, @Total);");
+                sqlFactura.Append("INSERT INTO factura VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Descuento,      @Subtotal, @Total);");
                 sqlFactura.Append("SELECT LAST INSERT_ID(); ");
 
                 StringBuilder sqlDetalle = new StringBuilder();
@@ -53,17 +53,27 @@ namespace Datos
                             using (MySqlCommand cmd2 = new MySqlCommand(sqlDetalle.ToString(), con, transaction))
                             {
                                 cmd2.CommandType = System.Data.CommandType.Text;
-                                cmd2.Parameters.Add("@Fecha", MySqlDbType.DateTime).Value = idFactura;
-                                cmd2.Parameters.Add("@CodigoProducto", MySqlDbType.VarChar, 25).Value = detalle.CodigoProducto;
+                                cmd2.Parameters.Add("@IdFactura", MySqlDbType.Int32).Value = idFactura;
+                                cmd2.Parameters.Add("@CodigoProducto", MySqlDbType.VarChar, 50).Value = detalle.CodigoProducto;
                                 cmd2.Parameters.Add("@Precio", MySqlDbType.Decimal).Value = detalle.Precio;
                                 cmd2.Parameters.Add("@Cantidad", MySqlDbType.Decimal).Value = detalle.Cantidad;
                                 cmd2.Parameters.Add("@Total", MySqlDbType.Decimal).Value = detalle.Total;
+                                cmd2.ExecuteNonQuery();
 
+                            }
+
+                            using (MySqlCommand cmd3 = new MySqlCommand(sqlExistencia.ToString(), con, transaction))
+                            {
+                                cmd3.CommandType = System.Data.CommandType.Text;
+                                cmd3.Parameters.Add("@Cantidad", MySqlDbType.Decimal).Value = detalle.Cantidad;
+                                cmd3.Parameters.Add("@Codigo", MySqlDbType.VarChar, 80).Value = detalle.CodigoProducto;
+                                cmd3.ExecuteNonQuery();
 
                             }
 
                         }
-
+                        transaction.Commit();
+                        inserto = true;
 
                     }
                     catch (System.Exception)
@@ -73,7 +83,6 @@ namespace Datos
                     }
 
                 }
-
 
             }
             catch (System.Exception)

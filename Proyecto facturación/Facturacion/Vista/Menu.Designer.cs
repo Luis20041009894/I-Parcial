@@ -40,7 +40,7 @@
             this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.NuevafacturaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.NuevaFacturaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.SalirButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(1309, 146);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -218,7 +218,7 @@
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(116, 61);
+            this.toolStripEx4.Size = new System.Drawing.Size(77, 61);
             this.toolStripEx4.TabIndex = 0;
             // 
             // ClientesToolStripButton
@@ -259,24 +259,25 @@
             this.toolStripEx1.Image = null;
             this.toolStripEx1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NuevafacturaToolStripButton});
+            this.NuevaFacturaToolStripButton});
             this.toolStripEx1.Location = new System.Drawing.Point(0, 1);
             this.toolStripEx1.Name = "toolStripEx1";
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(123, 61);
+            this.toolStripEx1.Size = new System.Drawing.Size(162, 61);
             this.toolStripEx1.TabIndex = 0;
             // 
-            // NuevafacturaToolStripButton
+            // NuevaFacturaToolStripButton
             // 
-            this.NuevafacturaToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevafacturaToolStripButton.Image = global::Vista.Properties.Resources.metodo_de_pago;
-            this.NuevafacturaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NuevafacturaToolStripButton.Name = "NuevafacturaToolStripButton";
-            this.NuevafacturaToolStripButton.Size = new System.Drawing.Size(114, 42);
-            this.NuevafacturaToolStripButton.Text = "Nueva Factura";
-            this.NuevafacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevaFacturaToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevaFacturaToolStripButton.Image = global::Vista.Properties.Resources.metodo_de_pago;
+            this.NuevaFacturaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NuevaFacturaToolStripButton.Name = "NuevaFacturaToolStripButton";
+            this.NuevaFacturaToolStripButton.Size = new System.Drawing.Size(114, 42);
+            this.NuevaFacturaToolStripButton.Text = "Nueva Factura";
+            this.NuevaFacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevaFacturaToolStripButton.Click += new System.EventHandler(this.NuevaFacturaToolStripButton_Click);
             // 
             // SalirButton
             // 
@@ -337,7 +338,7 @@
         private System.Windows.Forms.ToolStripButton UsuariosToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
         private System.Windows.Forms.ToolStripButton ClientesToolStripButton;
-        private System.Windows.Forms.ToolStripButton NuevafacturaToolStripButton;
+        private System.Windows.Forms.ToolStripButton NuevaFacturaToolStripButton;
         private System.Windows.Forms.Button SalirButton;
     }
 }

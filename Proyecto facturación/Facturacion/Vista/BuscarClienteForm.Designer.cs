@@ -28,57 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AceptarButton = new System.Windows.Forms.Button();
+            this.CancelarButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.ClientesDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // AceptarButton
             // 
-            this.button1.Location = new System.Drawing.Point(662, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 72);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AceptarButton.Location = new System.Drawing.Point(828, 50);
+            this.AceptarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AceptarButton.Name = "AceptarButton";
+            this.AceptarButton.Size = new System.Drawing.Size(154, 90);
+            this.AceptarButton.TabIndex = 0;
+            this.AceptarButton.Text = "Aceptar";
+            this.AceptarButton.UseVisualStyleBackColor = true;
+            this.AceptarButton.Click += new System.EventHandler(this.AceptarButton_Click);
             // 
-            // button2
+            // CancelarButton
             // 
-            this.button2.Location = new System.Drawing.Point(791, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 72);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CancelarButton.Location = new System.Drawing.Point(989, 50);
+            this.CancelarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CancelarButton.Name = "CancelarButton";
+            this.CancelarButton.Size = new System.Drawing.Size(154, 90);
+            this.CancelarButton.TabIndex = 1;
+            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Location = new System.Drawing.Point(15, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre:";
             // 
-            // textBox1
+            // NombreTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 22);
-            this.textBox1.TabIndex = 3;
+            this.NombreTextBox.Location = new System.Drawing.Point(94, 46);
+            this.NombreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(575, 27);
+            this.NombreTextBox.TabIndex = 3;
+            this.NombreTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NomreTextBox_KeyUp);
+            // 
+            // ClientesDataGridView
+            // 
+            this.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientesDataGridView.Location = new System.Drawing.Point(1, 264);
+            this.ClientesDataGridView.Name = "ClientesDataGridView";
+            this.ClientesDataGridView.RowHeadersWidth = 51;
+            this.ClientesDataGridView.RowTemplate.Height = 24;
+            this.ClientesDataGridView.Size = new System.Drawing.Size(1177, 301);
+            this.ClientesDataGridView.TabIndex = 4;
             // 
             // BuscarClienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1178, 562);
+            this.Controls.Add(this.ClientesDataGridView);
+            this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CancelarButton);
+            this.Controls.Add(this.AceptarButton);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BuscarClienteForm";
             this.Text = "BuscarClienteForm";
+            this.Load += new System.EventHandler(this.BuscarClienteForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,9 +110,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AceptarButton;
+        private System.Windows.Forms.Button CancelarButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NombreTextBox;
+        private System.Windows.Forms.DataGridView ClientesDataGridView;
     }
 }

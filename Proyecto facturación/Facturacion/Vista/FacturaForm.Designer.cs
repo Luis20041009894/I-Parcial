@@ -141,8 +141,9 @@
             this.BuscarClienteButton.Name = "BuscarClienteButton";
             this.BuscarClienteButton.Size = new System.Drawing.Size(70, 24);
             this.BuscarClienteButton.TabIndex = 5;
-            this.BuscarClienteButton.Text = "B";
+            this.BuscarClienteButton.Text = "...";
             this.BuscarClienteButton.UseVisualStyleBackColor = true;
+            this.BuscarClienteButton.Click += new System.EventHandler(this.BuscarClienteButton_Click);
             // 
             // NombreClienteTextBox
             // 
