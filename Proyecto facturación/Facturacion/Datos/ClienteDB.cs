@@ -32,7 +32,7 @@ namespace Datos
                         comando.Parameters.Add("@Telefono", MySqlDbType.VarChar, 15).Value = cliente.Telefono;
                         comando.Parameters.Add("@Correo", MySqlDbType.VarChar, 45).Value = cliente.Correo;
                         comando.Parameters.Add("@Direccion", MySqlDbType.VarChar, 100).Value = cliente.Direccion;
-                        comando.Parameters.Add("@FechaNacimiento", MySqlDbType.DateTime).Value = cliente.FechaNacmiento;
+                        comando.Parameters.Add("@FechaNacimiento", MySqlDbType.DateTime).Value = cliente.FechaNacimiento;
                         comando.Parameters.Add("@EstadoActivo", MySqlDbType.Bit).Value = cliente.EstadoActivo;
                         comando.ExecuteNonQuery();
                         inserto = true;
@@ -71,7 +71,7 @@ namespace Datos
                         comando.Parameters.Add("@Telefono", MySqlDbType.VarChar, 15).Value = cliente.Telefono;
                         comando.Parameters.Add("@Correo", MySqlDbType.VarChar, 45).Value = cliente.Correo;
                         comando.Parameters.Add("@Direccion", MySqlDbType.VarChar, 100).Value = cliente.Direccion;
-                        comando.Parameters.Add("@FechaNacimiento", MySqlDbType.DateTime).Value = cliente.FechaNacmiento;
+                        comando.Parameters.Add("@FechaNacimiento", MySqlDbType.DateTime).Value = cliente.FechaNacimiento;
                         comando.Parameters.Add("@EstadoActivo", MySqlDbType.Bit).Value = cliente.EstadoActivo;
                         comando.ExecuteNonQuery();
                         edito = true;
@@ -157,7 +157,7 @@ namespace Datos
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM cliente WHERE Nombre LIKE = ('%@Nombre%') ");
+                sql.Append(" SELECT * FROM cliente WHERE Nombre LIKE '%" + nombre + "%'");
 
                 using (MySqlConnection _conexion = new MySqlConnection(cadena))
                 {
@@ -165,7 +165,6 @@ namespace Datos
                     using (MySqlCommand comando = new MySqlCommand(sql.ToString(), _conexion))
                     {
                         comando.CommandType = CommandType.Text;
-                        comando.Parameters.Add("@Nombre", MySqlDbType.VarChar, 50).Value = nombre;
                         MySqlDataReader dr = comando.ExecuteReader();
                         dt.Load(dr);
 
@@ -206,7 +205,7 @@ namespace Datos
                             cliente.Telefono = dr["Telefono"].ToString();
                             cliente.Correo = dr["Correo"].ToString();
                             cliente.Direccion = dr["Direccion"].ToString();
-                            cliente.FechaNacmiento = Convert.ToDateTime(dr["FechaNacimiento"]);
+                            cliente.FechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]);
                             cliente.EstadoActivo = Convert.ToBoolean(dr["EstadoActivo"]);
                         }
 

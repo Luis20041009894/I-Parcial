@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Datos
 {
-    internal class FacturaDB
+    public class FacturaDB
     {
         string cadena = "server=localhost; user=root; database=factura_LM; password=Shinigam96!;";
 
@@ -17,11 +17,11 @@ namespace Datos
             try
             {
                 StringBuilder sqlFactura = new StringBuilder();
-                sqlFactura.Append("INSERT INTO factura VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Descuento,      @Subtotal, @Total);");
+                sqlFactura.Append("INSERT INTO factura (Fecha, IdentidadCliente, CodigoUsuario, ISV, Descuento, SubTotal, Total) VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Descuento, @SubTotal, @Total); ");
                 sqlFactura.Append("SELECT LAST INSERT_ID(); ");
 
                 StringBuilder sqlDetalle = new StringBuilder();
-                sqlDetalle.Append("INSERT INTO detallefactura VALUES (@IdFactura, @CodigoProducto, @Precio, @Cantidad, @Total); ");
+                sqlDetalle.Append("INSERT INTO detallefactura (IdFactura, CodigoProducto, Precio, Cantidad, Total) VALUES (@IdFactura, @CodigoProducto, @Precio, @Cantidad, @Total); ");
 
                 StringBuilder sqlExistencia = new StringBuilder();
                 sqlExistencia.Append("UPDATE producto SET Existencia = Existencia - @Cantidad WHERE codigo = @Codigo; ");
@@ -42,7 +42,7 @@ namespace Datos
                             cmd1.Parameters.Add("@CodigoUsuario", MySqlDbType.VarChar, 50).Value = factura.CodigoUsuario;
                             cmd1.Parameters.Add("@ISV", MySqlDbType.Decimal).Value = factura.ISV;
                             cmd1.Parameters.Add("@Descuento", MySqlDbType.Decimal).Value = factura.Descuento;
-                            cmd1.Parameters.Add("@SubTotal", MySqlDbType.Decimal).Value = factura.Subtotal;
+                            cmd1.Parameters.Add("@SubTotal", MySqlDbType.Decimal).Value = factura.SubTotal;
                             cmd1.Parameters.Add("@Total", MySqlDbType.Decimal).Value = factura.Total;
                             idFactura = Convert.ToInt32(cmd1.ExecuteScalar());
 

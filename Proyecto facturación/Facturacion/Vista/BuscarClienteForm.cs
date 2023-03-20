@@ -29,7 +29,7 @@ namespace Vista
                 cliente.Telefono = ClientesDataGridView.CurrentRow.Cells["Telefono"].Value.ToString();
                 cliente.Correo = ClientesDataGridView.CurrentRow.Cells["Correo"].Value.ToString();
                 cliente.Direccion = ClientesDataGridView.CurrentRow.Cells["Direccion"].Value.ToString();
-                cliente.FechaNacmiento = Convert.ToDateTime(ClientesDataGridView.CurrentRow.Cells["FechaNacmiento"].Value);
+                cliente.FechaNacimiento = Convert.ToDateTime(ClientesDataGridView.CurrentRow.Cells["FechaNacimiento"].Value);
                 cliente.EstadoActivo = Convert.ToBoolean(ClientesDataGridView.CurrentRow.Cells["EstadoActivo"].Value);
                 this.Close();
 

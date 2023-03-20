@@ -265,7 +265,7 @@
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(162, 61);
+            this.toolStripEx1.Size = new System.Drawing.Size(123, 61);
             this.toolStripEx1.TabIndex = 0;
             // 
             // NuevaFacturaToolStripButton
@@ -301,6 +301,7 @@
             this.IsMdiContainer = true;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).EndInit();
             this.ribbonControlAdv1.ResumeLayout(false);
             this.ribbonControlAdv1.PerformLayout();

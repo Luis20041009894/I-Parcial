@@ -137,7 +137,7 @@ namespace Vista
                 cliente.Telefono = TelefonoTextBox.Text;
                 cliente.Correo = CorreoTextBox.Text;
                 cliente.Direccion = DireccionTextBox.Text;
-                cliente.FechaNacmiento = Convert.ToDateTime(FechaNacimientoDateTimePicker.Value);
+                cliente.FechaNacimiento = Convert.ToDateTime(FechaNacimientoDateTimePicker.Value);
                 cliente.EstadoActivo = EstadoActivoCheckBox.Checked;
 
 
@@ -168,7 +168,7 @@ namespace Vista
                 cliente.Telefono = TelefonoTextBox.Text;
                 cliente.Correo = CorreoTextBox.Text;
                 cliente.Direccion = DireccionTextBox.Text;
-                cliente.FechaNacmiento = Convert.ToDateTime(FechaNacimientoDateTimePicker.Value);
+                cliente.FechaNacimiento = Convert.ToDateTime(FechaNacimientoDateTimePicker.Value);
                 cliente.EstadoActivo = EstadoActivoCheckBox.Checked;
 
 

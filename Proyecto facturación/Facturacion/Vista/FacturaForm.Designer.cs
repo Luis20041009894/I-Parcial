@@ -46,7 +46,7 @@
             this.ExistenciaTextBox = new System.Windows.Forms.TextBox();
             this.BuscarProductoButton = new System.Windows.Forms.Button();
             this.DescripcionProductoTextBox = new System.Windows.Forms.TextBox();
-            this.CodigoTextBox = new System.Windows.Forms.TextBox();
+            this.CodigoProductoTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.SubTotalTtextBox = new System.Windows.Forms.TextBox();
@@ -178,7 +178,7 @@
             this.groupBox3.Controls.Add(this.ExistenciaTextBox);
             this.groupBox3.Controls.Add(this.BuscarProductoButton);
             this.groupBox3.Controls.Add(this.DescripcionProductoTextBox);
-            this.groupBox3.Controls.Add(this.CodigoTextBox);
+            this.groupBox3.Controls.Add(this.CodigoProductoTextBox);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(13, 300);
             this.groupBox3.Name = "groupBox3";
@@ -202,6 +202,7 @@
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(200, 24);
             this.CantidadTextBox.TabIndex = 8;
+            this.CantidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadTextBox_KeyPress);
             // 
             // label6
             // 
@@ -225,8 +226,9 @@
             this.BuscarProductoButton.Name = "BuscarProductoButton";
             this.BuscarProductoButton.Size = new System.Drawing.Size(70, 27);
             this.BuscarProductoButton.TabIndex = 5;
-            this.BuscarProductoButton.Text = "B";
+            this.BuscarProductoButton.Text = "...";
             this.BuscarProductoButton.UseVisualStyleBackColor = true;
+            this.BuscarProductoButton.Click += new System.EventHandler(this.BuscarProductoButton_Click);
             // 
             // DescripcionProductoTextBox
             // 
@@ -236,12 +238,13 @@
             this.DescripcionProductoTextBox.Size = new System.Drawing.Size(584, 24);
             this.DescripcionProductoTextBox.TabIndex = 4;
             // 
-            // CodigoTextBox
+            // CodigoProductoTextBox
             // 
-            this.CodigoTextBox.Location = new System.Drawing.Point(118, 52);
-            this.CodigoTextBox.Name = "CodigoTextBox";
-            this.CodigoTextBox.Size = new System.Drawing.Size(188, 24);
-            this.CodigoTextBox.TabIndex = 3;
+            this.CodigoProductoTextBox.Location = new System.Drawing.Point(118, 52);
+            this.CodigoProductoTextBox.Name = "CodigoProductoTextBox";
+            this.CodigoProductoTextBox.Size = new System.Drawing.Size(188, 24);
+            this.CodigoProductoTextBox.TabIndex = 3;
+            this.CodigoProductoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodigoProductoTextBox_KeyPress);
             // 
             // label5
             // 
@@ -254,6 +257,7 @@
             // 
             // DetalleDataGridView
             // 
+            this.DetalleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DetalleDataGridView.Location = new System.Drawing.Point(12, 455);
             this.DetalleDataGridView.Name = "DetalleDataGridView";
@@ -302,6 +306,7 @@
             this.GuardarButton.TabIndex = 10;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // CancelarButton
             // 
@@ -373,6 +378,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FacturaForm";
             this.Text = "FacturaForm1";
+            this.Load += new System.EventHandler(this.FacturaForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -401,7 +407,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button BuscarProductoButton;
         private System.Windows.Forms.TextBox DescripcionProductoTextBox;
-        private System.Windows.Forms.TextBox CodigoTextBox;
+        private System.Windows.Forms.TextBox CodigoProductoTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox CantidadTextBox;

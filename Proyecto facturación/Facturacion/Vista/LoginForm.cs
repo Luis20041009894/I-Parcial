@@ -48,6 +48,11 @@ namespace Vista
             {
                 if (usuario.EstadoActivo)
                 {
+
+                    System.Security.Principal.GenericIdentity indetidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+                    System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(indetidad, new string[] { usuario.Rol });
+                    System.Threading.Thread.CurrentPrincipal = principal;
+
                     // Mostrar el Menu
                     Menu menuFormulario = new Menu();
                     this.Hide();
