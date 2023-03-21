@@ -19,7 +19,6 @@ namespace Vista
         ProductoDB productoDB = new ProductoDB();
         List<DetalleFactura> listaDetalles = new List<DetalleFactura>();
         FacturaDB facturaDB = new FacturaDB();
-
         decimal subTotal = 0;
         decimal isv = 0;
         decimal totalAPagar = 0;
@@ -33,7 +32,6 @@ namespace Vista
                 miCliente = new Cliente();
                 miCliente = clienteDB.DevolverClientePorIdentidad(IdentidadTextBox.Text);
                 NombreClienteTextBox.Text = miCliente.Nombre;
-
             }
             else
             {
@@ -46,13 +44,10 @@ namespace Vista
         {
             BuscarClienteForm form = new BuscarClienteForm();
             form.ShowDialog();
-
             miCliente = new Cliente();
             miCliente = form.cliente;
             IdentidadTextBox.Text = miCliente.Identidad;
             NombreClienteTextBox.Text = miCliente.Nombre;
-
-
 
         }
 
@@ -69,7 +64,6 @@ namespace Vista
                 miProducto = productoDB.DevolverProductoPorCodigo(CodigoProductoTextBox.Text);
                 DescripcionProductoTextBox.Text = miProducto.Descripcion;
                 ExistenciaTextBox.Text = miProducto.Existencia.ToString();
-
             }
             else
             {
@@ -95,6 +89,7 @@ namespace Vista
         {
             if (e.KeyChar == (char)Keys.Enter && !string.IsNullOrEmpty(CantidadTextBox.Text))
             {
+
                 DetalleFactura detalle = new DetalleFactura();
                 detalle.CodigoProducto = miProducto.Codigo;
                 detalle.Cantidad = Convert.ToInt32(CantidadTextBox.Text);
@@ -104,15 +99,15 @@ namespace Vista
 
                 subTotal += detalle.Total;
                 isv = subTotal * 0.15M;
-                totalAPagar = subTotal + isv - descuento;
+                totalAPagar = subTotal + isv;
 
                 listaDetalles.Add(detalle);
                 DetalleDataGridView.DataSource = null;
                 DetalleDataGridView.DataSource = listaDetalles;
 
-                SubTotalTtextBox.Text = subTotal.ToString();
-                IsvTextBox.Text = isv.ToString();
-                TotalTextBox.Text = totalAPagar.ToString();
+                SubTotalTextBox.Text = subTotal.ToString("N2");
+                ISVTextBox.Text = isv.ToString("N2");
+                TotalTextBox.Text = totalAPagar.ToString("N2");
 
                 miProducto = null;
                 CodigoProductoTextBox.Clear();
@@ -120,8 +115,6 @@ namespace Vista
                 ExistenciaTextBox.Clear();
                 CantidadTextBox.Clear();
                 CodigoProductoTextBox.Focus();
-
-
             }
         }
 
@@ -145,10 +138,7 @@ namespace Vista
                 MessageBox.Show("Factura registrada exitosamente");
             }
             else
-            {
                 MessageBox.Show("No se pudo registrar la factura");
-            }
-
         }
         private void LimpiarControles()
         {
@@ -157,21 +147,40 @@ namespace Vista
             listaDetalles = null;
             FechaDateTimePicker.Value = DateTime.Now;
             IdentidadTextBox.Clear();
+            NombreClienteTextBox.Clear();
             CodigoProductoTextBox.Clear();
             DescripcionProductoTextBox.Clear();
             ExistenciaTextBox.Clear();
             CantidadTextBox.Clear();
             DetalleDataGridView.DataSource = null;
             subTotal = 0;
-            SubTotalTtextBox.Clear();
+            SubTotalTextBox.Clear();
             isv = 0;
-            IsvTextBox.Clear();
+            ISVTextBox.Clear();
             descuento = 0;
             DescuentoTextBox.Clear();
             totalAPagar = 0;
             TotalTextBox.Clear();
 
+        }
 
+        private void DescuentoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == (char)Keys.Enter && !string.IsNullOrEmpty(DescuentoTextBox.Text))
+            {
+                descuento = Convert.ToDecimal(DescuentoTextBox.Text);
+                totalAPagar = totalAPagar - descuento;
+                TotalTextBox.Text = totalAPagar.ToString();
+            }
         }
     }
 }

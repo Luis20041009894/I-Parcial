@@ -17,20 +17,20 @@ namespace Datos
             try
             {
                 StringBuilder sqlFactura = new StringBuilder();
-                sqlFactura.Append("INSERT INTO factura (Fecha, IdentidadCliente, CodigoUsuario, ISV, Descuento, SubTotal, Total) VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Descuento, @SubTotal, @Total); ");
-                sqlFactura.Append("SELECT LAST INSERT_ID(); ");
+                sqlFactura.Append(" INSERT INTO factura (Fecha, IdentidadCliente, CodigoUsuario, ISV, Descuento, SubTotal, Total) VALUES (@Fecha, @IdentidadCliente, @CodigoUsuario, @ISV, @Descuento, @SubTotal, @Total); ");
+                sqlFactura.Append(" SELECT LAST_INSERT_ID(); ");
 
                 StringBuilder sqlDetalle = new StringBuilder();
-                sqlDetalle.Append("INSERT INTO detallefactura (IdFactura, CodigoProducto, Precio, Cantidad, Total) VALUES (@IdFactura, @CodigoProducto, @Precio, @Cantidad, @Total); ");
+                sqlDetalle.Append(" INSERT INTO detallefactura (IdFactura, CodigoProducto, Precio, Cantidad, Total) VALUES (@IdFactura, @CodigoProducto, @Precio, @Cantidad, @Total); ");
 
                 StringBuilder sqlExistencia = new StringBuilder();
-                sqlExistencia.Append("UPDATE producto SET Existencia = Existencia - @Cantidad WHERE codigo = @Codigo; ");
+                sqlExistencia.Append(" UPDATE producto SET Existencia = Existencia - @Cantidad WHERE Codigo = @Codigo; ");
 
                 using (MySqlConnection con = new MySqlConnection(cadena))
                 {
                     con.Open();
 
-                    MySqlTransaction transaction = con.BeginTransaction(System.Data.IsolationLevel.ReadUncommitted);
+                    MySqlTransaction transaction = con.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
 
                     try
                     {
@@ -45,7 +45,6 @@ namespace Datos
                             cmd1.Parameters.Add("@SubTotal", MySqlDbType.Decimal).Value = factura.SubTotal;
                             cmd1.Parameters.Add("@Total", MySqlDbType.Decimal).Value = factura.Total;
                             idFactura = Convert.ToInt32(cmd1.ExecuteScalar());
-
                         }
 
                         foreach (DetalleFactura detalle in detalles)
@@ -59,7 +58,6 @@ namespace Datos
                                 cmd2.Parameters.Add("@Cantidad", MySqlDbType.Decimal).Value = detalle.Cantidad;
                                 cmd2.Parameters.Add("@Total", MySqlDbType.Decimal).Value = detalle.Total;
                                 cmd2.ExecuteNonQuery();
-
                             }
 
                             using (MySqlCommand cmd3 = new MySqlCommand(sqlExistencia.ToString(), con, transaction))
@@ -68,30 +66,23 @@ namespace Datos
                                 cmd3.Parameters.Add("@Cantidad", MySqlDbType.Decimal).Value = detalle.Cantidad;
                                 cmd3.Parameters.Add("@Codigo", MySqlDbType.VarChar, 80).Value = detalle.CodigoProducto;
                                 cmd3.ExecuteNonQuery();
-
                             }
-
                         }
+
                         transaction.Commit();
                         inserto = true;
-
                     }
                     catch (System.Exception)
                     {
                         inserto = false;
                         transaction.Rollback();
                     }
-
                 }
-
             }
             catch (System.Exception)
             {
-
             }
             return inserto;
-
-
         }
     }
 }

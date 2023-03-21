@@ -125,7 +125,7 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(533, 186);
+            this.EliminarButton.Location = new System.Drawing.Point(761, 186);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(93, 49);
             this.EliminarButton.TabIndex = 23;
@@ -136,7 +136,7 @@
             // GuardarButton
             // 
             this.GuardarButton.Enabled = false;
-            this.GuardarButton.Location = new System.Drawing.Point(425, 186);
+            this.GuardarButton.Location = new System.Drawing.Point(653, 186);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(93, 49);
             this.GuardarButton.TabIndex = 22;
@@ -146,7 +146,7 @@
             // 
             // ModificarButton
             // 
-            this.ModificarButton.Location = new System.Drawing.Point(317, 186);
+            this.ModificarButton.Location = new System.Drawing.Point(545, 186);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(93, 49);
             this.ModificarButton.TabIndex = 21;
@@ -157,7 +157,7 @@
             // CancelarButton
             // 
             this.CancelarButton.Enabled = false;
-            this.CancelarButton.Location = new System.Drawing.Point(641, 186);
+            this.CancelarButton.Location = new System.Drawing.Point(869, 186);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(93, 49);
             this.CancelarButton.TabIndex = 20;
@@ -167,7 +167,7 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(209, 186);
+            this.NuevoButton.Location = new System.Drawing.Point(437, 186);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(93, 49);
             this.NuevoButton.TabIndex = 19;
@@ -177,12 +177,13 @@
             // 
             // ProductosDataGridView
             // 
+            this.ProductosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductosDataGridView.Location = new System.Drawing.Point(1, 270);
             this.ProductosDataGridView.Name = "ProductosDataGridView";
             this.ProductosDataGridView.RowHeadersWidth = 51;
             this.ProductosDataGridView.RowTemplate.Height = 24;
-            this.ProductosDataGridView.Size = new System.Drawing.Size(760, 189);
+            this.ProductosDataGridView.Size = new System.Drawing.Size(974, 278);
             this.ProductosDataGridView.TabIndex = 24;
             // 
             // errorProvider1
@@ -210,7 +211,7 @@
             // AdjuntarImagenButton
             // 
             this.AdjuntarImagenButton.Image = global::Vista.Properties.Resources.imagen;
-            this.AdjuntarImagenButton.Location = new System.Drawing.Point(695, 124);
+            this.AdjuntarImagenButton.Location = new System.Drawing.Point(920, 123);
             this.AdjuntarImagenButton.Name = "AdjuntarImagenButton";
             this.AdjuntarImagenButton.Size = new System.Drawing.Size(49, 40);
             this.AdjuntarImagenButton.TabIndex = 9;
@@ -220,7 +221,7 @@
             // ImagenPictureBox
             // 
             this.ImagenPictureBox.BackColor = System.Drawing.Color.White;
-            this.ImagenPictureBox.Location = new System.Drawing.Point(483, 6);
+            this.ImagenPictureBox.Location = new System.Drawing.Point(708, 5);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(206, 159);
             this.ImagenPictureBox.TabIndex = 8;
@@ -230,7 +231,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 461);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(973, 546);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.EstadoActivoCheckBox);
             this.Controls.Add(this.ProductosDataGridView);

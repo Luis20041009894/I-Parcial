@@ -129,7 +129,6 @@ namespace Datos
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" SELECT * FROM cliente ");
-
                 using (MySqlConnection _conexion = new MySqlConnection(cadena))
                 {
                     _conexion.Open();
@@ -138,17 +137,13 @@ namespace Datos
                         comando.CommandType = CommandType.Text;
                         MySqlDataReader dr = comando.ExecuteReader();
                         dt.Load(dr);
-
                     }
                 }
-
             }
             catch (System.Exception ex)
             {
             }
-
             return dt;
-
         }
 
         public DataTable DevolverClientesPorNombre(string nombre)
@@ -167,17 +162,13 @@ namespace Datos
                         comando.CommandType = CommandType.Text;
                         MySqlDataReader dr = comando.ExecuteReader();
                         dt.Load(dr);
-
                     }
                 }
-
             }
             catch (System.Exception ex)
             {
             }
-
             return dt;
-
         }
 
 
@@ -187,7 +178,7 @@ namespace Datos
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM cliente WHERE indentidad = @Identidad; ");
+                sql.Append(" SELECT * FROM cliente WHERE Identidad = @Identidad; ");
                 using (MySqlConnection _conexion = new MySqlConnection(cadena))
                 {
                     _conexion.Open();
@@ -208,17 +199,13 @@ namespace Datos
                             cliente.FechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]);
                             cliente.EstadoActivo = Convert.ToBoolean(dr["EstadoActivo"]);
                         }
-
                     }
                 }
-
             }
             catch (System.Exception ex)
             {
             }
-
             return cliente;
-
         }
 
 

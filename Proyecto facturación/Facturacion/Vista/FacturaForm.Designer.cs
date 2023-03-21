@@ -49,8 +49,8 @@
             this.CodigoProductoTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
-            this.SubTotalTtextBox = new System.Windows.Forms.TextBox();
-            this.IsvTextBox = new System.Windows.Forms.TextBox();
+            this.SubTotalTextBox = new System.Windows.Forms.TextBox();
+            this.ISVTextBox = new System.Windows.Forms.TextBox();
             this.DescuentoTextBox = new System.Windows.Forms.TextBox();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -266,21 +266,21 @@
             this.DetalleDataGridView.Size = new System.Drawing.Size(1022, 227);
             this.DetalleDataGridView.TabIndex = 4;
             // 
-            // SubTotalTtextBox
+            // SubTotalTextBox
             // 
-            this.SubTotalTtextBox.Location = new System.Drawing.Point(787, 684);
-            this.SubTotalTtextBox.Name = "SubTotalTtextBox";
-            this.SubTotalTtextBox.ReadOnly = true;
-            this.SubTotalTtextBox.Size = new System.Drawing.Size(153, 24);
-            this.SubTotalTtextBox.TabIndex = 9;
+            this.SubTotalTextBox.Location = new System.Drawing.Point(787, 684);
+            this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.ReadOnly = true;
+            this.SubTotalTextBox.Size = new System.Drawing.Size(153, 24);
+            this.SubTotalTextBox.TabIndex = 9;
             // 
-            // IsvTextBox
+            // ISVTextBox
             // 
-            this.IsvTextBox.Location = new System.Drawing.Point(787, 714);
-            this.IsvTextBox.Name = "IsvTextBox";
-            this.IsvTextBox.ReadOnly = true;
-            this.IsvTextBox.Size = new System.Drawing.Size(153, 24);
-            this.IsvTextBox.TabIndex = 10;
+            this.ISVTextBox.Location = new System.Drawing.Point(787, 714);
+            this.ISVTextBox.Name = "ISVTextBox";
+            this.ISVTextBox.ReadOnly = true;
+            this.ISVTextBox.Size = new System.Drawing.Size(153, 24);
+            this.ISVTextBox.TabIndex = 10;
             // 
             // DescuentoTextBox
             // 
@@ -288,6 +288,7 @@
             this.DescuentoTextBox.Name = "DescuentoTextBox";
             this.DescuentoTextBox.Size = new System.Drawing.Size(153, 24);
             this.DescuentoTextBox.TabIndex = 11;
+            this.DescuentoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescuentoTextBox_KeyPress);
             // 
             // TotalTextBox
             // 
@@ -368,8 +369,8 @@
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.DescuentoTextBox);
-            this.Controls.Add(this.IsvTextBox);
-            this.Controls.Add(this.SubTotalTtextBox);
+            this.Controls.Add(this.ISVTextBox);
+            this.Controls.Add(this.SubTotalTextBox);
             this.Controls.Add(this.DetalleDataGridView);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -414,8 +415,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox ExistenciaTextBox;
         private System.Windows.Forms.DataGridView DetalleDataGridView;
-        private System.Windows.Forms.TextBox SubTotalTtextBox;
-        private System.Windows.Forms.TextBox IsvTextBox;
+        private System.Windows.Forms.TextBox SubTotalTextBox;
+        private System.Windows.Forms.TextBox ISVTextBox;
         private System.Windows.Forms.TextBox DescuentoTextBox;
         private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.Button GuardarButton;

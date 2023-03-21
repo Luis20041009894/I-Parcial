@@ -57,7 +57,7 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(663, 216);
+            this.EliminarButton.Location = new System.Drawing.Point(711, 222);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(84, 49);
             this.EliminarButton.TabIndex = 35;
@@ -68,7 +68,7 @@
             // GuardarButton
             // 
             this.GuardarButton.Enabled = false;
-            this.GuardarButton.Location = new System.Drawing.Point(573, 216);
+            this.GuardarButton.Location = new System.Drawing.Point(621, 222);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(84, 49);
             this.GuardarButton.TabIndex = 34;
@@ -78,7 +78,7 @@
             // 
             // ModificarButton
             // 
-            this.ModificarButton.Location = new System.Drawing.Point(483, 216);
+            this.ModificarButton.Location = new System.Drawing.Point(531, 222);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(84, 49);
             this.ModificarButton.TabIndex = 33;
@@ -89,7 +89,7 @@
             // CancelarButton
             // 
             this.CancelarButton.Enabled = false;
-            this.CancelarButton.Location = new System.Drawing.Point(756, 216);
+            this.CancelarButton.Location = new System.Drawing.Point(804, 222);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(84, 49);
             this.CancelarButton.TabIndex = 32;
@@ -99,7 +99,7 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(393, 216);
+            this.NuevoButton.Location = new System.Drawing.Point(441, 222);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(84, 49);
             this.NuevoButton.TabIndex = 31;
@@ -113,7 +113,7 @@
             this.EstadoActivoCheckBox.Enabled = false;
             this.EstadoActivoCheckBox.Location = new System.Drawing.Point(123, 175);
             this.EstadoActivoCheckBox.Name = "EstadoActivoCheckBox";
-            this.EstadoActivoCheckBox.Size = new System.Drawing.Size(34, 33);
+            this.EstadoActivoCheckBox.Size = new System.Drawing.Size(18, 17);
             this.EstadoActivoCheckBox.TabIndex = 30;
             this.EstadoActivoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -122,50 +122,50 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(19, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 36);
+            this.label6.Size = new System.Drawing.Size(86, 18);
             this.label6.TabIndex = 29;
             this.label6.Text = "Esta Activo:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(406, 125);
+            this.label5.Location = new System.Drawing.Point(454, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 36);
+            this.label5.Size = new System.Drawing.Size(75, 18);
             this.label5.TabIndex = 27;
             this.label5.Text = "Direccion:";
             // 
             // CorreoTextBox
             // 
             this.CorreoTextBox.Enabled = false;
-            this.CorreoTextBox.Location = new System.Drawing.Point(483, 73);
+            this.CorreoTextBox.Location = new System.Drawing.Point(531, 79);
             this.CorreoTextBox.Name = "CorreoTextBox";
-            this.CorreoTextBox.Size = new System.Drawing.Size(341, 41);
+            this.CorreoTextBox.Size = new System.Drawing.Size(341, 24);
             this.CorreoTextBox.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(406, 76);
+            this.label4.Location = new System.Drawing.Point(454, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 36);
+            this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 25;
             this.label4.Text = "Correo:";
             // 
             // TelefonoTextBox
             // 
             this.TelefonoTextBox.Enabled = false;
-            this.TelefonoTextBox.Location = new System.Drawing.Point(483, 24);
+            this.TelefonoTextBox.Location = new System.Drawing.Point(531, 30);
             this.TelefonoTextBox.Name = "TelefonoTextBox";
-            this.TelefonoTextBox.Size = new System.Drawing.Size(341, 41);
+            this.TelefonoTextBox.Size = new System.Drawing.Size(341, 24);
             this.TelefonoTextBox.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(407, 24);
+            this.label3.Location = new System.Drawing.Point(455, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 36);
+            this.label3.Size = new System.Drawing.Size(70, 18);
             this.label3.TabIndex = 23;
             this.label3.Text = "Telefono:";
             // 
@@ -174,7 +174,7 @@
             this.NombreTextBox.Enabled = false;
             this.NombreTextBox.Location = new System.Drawing.Point(99, 76);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(279, 41);
+            this.NombreTextBox.Size = new System.Drawing.Size(279, 24);
             this.NombreTextBox.TabIndex = 22;
             // 
             // label2
@@ -182,7 +182,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 36);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 21;
             this.label2.Text = "Nombre:";
             // 
@@ -191,7 +191,7 @@
             this.IdTextBox.Enabled = false;
             this.IdTextBox.Location = new System.Drawing.Point(99, 24);
             this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(279, 41);
+            this.IdTextBox.Size = new System.Drawing.Size(279, 24);
             this.IdTextBox.TabIndex = 20;
             // 
             // label1
@@ -199,26 +199,27 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 36);
+            this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 19;
             this.label1.Text = "Identidad:";
             // 
             // ClienteDataGridView
             // 
+            this.ClienteDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClienteDataGridView.Location = new System.Drawing.Point(-4, 282);
             this.ClienteDataGridView.Name = "ClienteDataGridView";
             this.ClienteDataGridView.RowHeadersWidth = 51;
             this.ClienteDataGridView.RowTemplate.Height = 24;
-            this.ClienteDataGridView.Size = new System.Drawing.Size(942, 323);
+            this.ClienteDataGridView.Size = new System.Drawing.Size(976, 323);
             this.ClienteDataGridView.TabIndex = 36;
             // 
             // DireccionTextBox
             // 
             this.DireccionTextBox.Enabled = false;
-            this.DireccionTextBox.Location = new System.Drawing.Point(483, 118);
+            this.DireccionTextBox.Location = new System.Drawing.Point(531, 124);
             this.DireccionTextBox.Name = "DireccionTextBox";
-            this.DireccionTextBox.Size = new System.Drawing.Size(341, 41);
+            this.DireccionTextBox.Size = new System.Drawing.Size(341, 24);
             this.DireccionTextBox.TabIndex = 37;
             // 
             // label7
@@ -226,7 +227,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(19, 133);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(302, 36);
+            this.label7.Size = new System.Drawing.Size(152, 18);
             this.label7.TabIndex = 38;
             this.label7.Text = "Fecha de Nacimiento:";
             // 
@@ -236,7 +237,7 @@
             this.FechaNacimientoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaNacimientoDateTimePicker.Location = new System.Drawing.Point(177, 128);
             this.FechaNacimientoDateTimePicker.Name = "FechaNacimientoDateTimePicker";
-            this.FechaNacimientoDateTimePicker.Size = new System.Drawing.Size(201, 41);
+            this.FechaNacimientoDateTimePicker.Size = new System.Drawing.Size(201, 24);
             this.FechaNacimientoDateTimePicker.TabIndex = 39;
             // 
             // errorProvider1
@@ -246,7 +247,7 @@
             // RegresarButton
             // 
             this.RegresarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegresarButton.Location = new System.Drawing.Point(830, 24);
+            this.RegresarButton.Location = new System.Drawing.Point(878, 30);
             this.RegresarButton.Name = "RegresarButton";
             this.RegresarButton.Size = new System.Drawing.Size(94, 49);
             this.RegresarButton.TabIndex = 40;
@@ -256,10 +257,10 @@
             // 
             // ClienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1250, 691);
+            this.ClientSize = new System.Drawing.Size(973, 606);
             this.Controls.Add(this.RegresarButton);
             this.Controls.Add(this.FechaNacimientoDateTimePicker);
             this.Controls.Add(this.label7);

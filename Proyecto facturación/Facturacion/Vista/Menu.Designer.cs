@@ -79,9 +79,9 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
-            this.ribbonControlAdv1.Size = new System.Drawing.Size(1309, 146);
+            this.ribbonControlAdv1.Size = new System.Drawing.Size(1320, 189);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
             this.ribbonControlAdv1.SystemText.RenameDisplayLabelText = "&Display Name:";
             this.ribbonControlAdv1.TabIndex = 0;
@@ -122,18 +122,17 @@
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx2.Size = new System.Drawing.Size(83, 61);
+            this.toolStripEx2.Size = new System.Drawing.Size(83, 104);
             this.toolStripEx2.TabIndex = 0;
             // 
             // UsuariosToolStripButton
             // 
             this.UsuariosToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuariosToolStripButton.Image = global::Vista.Properties.Resources.grupo__1_;
-            this.UsuariosToolStripButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.UsuariosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UsuariosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UsuariosToolStripButton.Name = "UsuariosToolStripButton";
-            this.UsuariosToolStripButton.Size = new System.Drawing.Size(74, 38);
+            this.UsuariosToolStripButton.Size = new System.Drawing.Size(74, 81);
             this.UsuariosToolStripButton.Text = "Usuarios";
             this.UsuariosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.UsuariosToolStripButton.Click += new System.EventHandler(this.UsuariosToolStripButton_Click);
@@ -170,7 +169,7 @@
             this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(93, 61);
+            this.toolStripEx3.Size = new System.Drawing.Size(93, 104);
             this.toolStripEx3.TabIndex = 0;
             // 
             // ProductosToolStripButton
@@ -180,7 +179,7 @@
             this.ProductosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProductosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ProductosToolStripButton.Name = "ProductosToolStripButton";
-            this.ProductosToolStripButton.Size = new System.Drawing.Size(84, 42);
+            this.ProductosToolStripButton.Size = new System.Drawing.Size(84, 85);
             this.ProductosToolStripButton.Text = "Productos";
             this.ProductosToolStripButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ProductosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -218,18 +217,18 @@
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(77, 61);
+            this.toolStripEx4.Size = new System.Drawing.Size(77, 104);
             this.toolStripEx4.TabIndex = 0;
             // 
             // ClientesToolStripButton
             // 
             this.ClientesToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientesToolStripButton.Image = global::Vista.Properties.Resources.objetivo;
+            this.ClientesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ClientesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ClientesToolStripButton.Name = "ClientesToolStripButton";
-            this.ClientesToolStripButton.Size = new System.Drawing.Size(68, 42);
+            this.ClientesToolStripButton.Size = new System.Drawing.Size(68, 85);
             this.ClientesToolStripButton.Text = "Clientes";
-            this.ClientesToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ClientesToolStripButton.Click += new System.EventHandler(this.ClientesToolStripButton_Click);
             // 
@@ -240,6 +239,7 @@
             // 
             // ribbonControlAdv1.ribbonPanel4
             // 
+            this.toolStripTabItem4.Panel.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripTabItem4.Panel.Controls.Add(this.toolStripEx1);
             this.toolStripTabItem4.Panel.Name = "ribbonPanel4";
             this.toolStripTabItem4.Panel.ScrollPosition = 0;
@@ -265,16 +265,17 @@
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(123, 61);
+            this.toolStripEx1.Size = new System.Drawing.Size(123, 104);
             this.toolStripEx1.TabIndex = 0;
             // 
             // NuevaFacturaToolStripButton
             // 
             this.NuevaFacturaToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevaFacturaToolStripButton.Image = global::Vista.Properties.Resources.metodo_de_pago;
+            this.NuevaFacturaToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NuevaFacturaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.NuevaFacturaToolStripButton.Name = "NuevaFacturaToolStripButton";
-            this.NuevaFacturaToolStripButton.Size = new System.Drawing.Size(114, 42);
+            this.NuevaFacturaToolStripButton.Size = new System.Drawing.Size(114, 81);
             this.NuevaFacturaToolStripButton.Text = "Nueva Factura";
             this.NuevaFacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.NuevaFacturaToolStripButton.Click += new System.EventHandler(this.NuevaFacturaToolStripButton_Click);
@@ -295,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 821);
+            this.ClientSize = new System.Drawing.Size(1320, 654);
             this.Controls.Add(this.SalirButton);
             this.Controls.Add(this.ribbonControlAdv1);
             this.IsMdiContainer = true;

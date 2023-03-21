@@ -47,5 +47,7 @@ namespace Vista
             facturaform.MdiParent = this;
             facturaform.Show();
         }
+
+
     }
 }

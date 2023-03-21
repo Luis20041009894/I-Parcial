@@ -5,7 +5,6 @@
         public int Id { get; set; }
         public int IdFactura { get; set; }
         public string CodigoProducto { get; set; }
-
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
         public int Cantidad { get; set; }
