@@ -75,18 +75,14 @@ namespace Datos
                         comando.Parameters.Add("@EstadoActivo", MySqlDbType.Bit).Value = cliente.EstadoActivo;
                         comando.ExecuteNonQuery();
                         edito = true;
-
                     }
                 }
-
 
             }
             catch (System.Exception ex)
             {
             }
-
             return edito;
-
         }
 
         public bool Eliminar(string identidad)
